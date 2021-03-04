@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1549A7A3-F81B-490B-9D79-55425B39B45D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LIMS_system_Prototype</RootNamespace>
+    <AssemblyName>LIMS_system_Prototype</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aWFlowerReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aWFlowerReport.Designer.cs">
+      <DependentUpon>aWFlowerReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="complianceReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="complianceReportViewer.Designer.cs">
+      <DependentUpon>complianceReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="complianceReportViewer2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="complianceReportViewer2.Designer.cs">
+      <DependentUpon>complianceReportViewer2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customerList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="customerList.Designer.cs">
+      <DependentUpon>customerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customersList.Designer.cs">
+      <DependentUpon>customersList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fullDATASET.cs">
+      <DependentUpon>fullDATASET.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fullDATASET.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fullDATASET.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IndexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IndexForm.Designer.cs">
+      <DependentUpon>IndexForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="metalsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="metalsForm.Designer.cs">
+      <DependentUpon>metalsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="metalsViewerInhalable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="metalsViewerInhalable.Designer.cs">
+      <DependentUpon>metalsViewerInhalable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="metalsViewerOther.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="metalsViewerOther.Designer.cs">
+      <DependentUpon>metalsViewerOther.cs</DependentUpon>
+    </Compile>
+    <Compile Include="microbialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="microbialForm.Designer.cs">
+      <DependentUpon>microbialForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="microbialNonInhalableReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="microbialNonInhalableReport.Designer.cs">
+      <DependentUpon>microbialNonInhalableReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="microbialViewerInhalable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="microbialViewerInhalable.Designer.cs">
+      <DependentUpon>microbialViewerInhalable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mycotoxinsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mycotoxinsForm.Designer.cs">
+      <DependentUpon>mycotoxinsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mycotoxinsViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mycotoxinsViewer.Designer.cs">
+      <DependentUpon>mycotoxinsViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pesticideForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pesticideForm.Designer.cs">
+      <DependentUpon>pesticideForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pestiViewerInhalable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pestiViewerInhalable.Designer.cs">
+      <DependentUpon>pestiViewerInhalable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pestiViewerNonInhalable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pestiViewerNonInhalable.Designer.cs">
+      <DependentUpon>pestiViewerNonInhalable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="potencyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="potencyForm.Designer.cs">
+      <DependentUpon>potencyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="potencyViewerInhalable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="potencyViewerInhalable.Designer.cs">
+      <DependentUpon>potencyViewerInhalable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="potencyViewerNonInhalable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="potencyViewerNonInhalable.Designer.cs">
+      <DependentUpon>potencyViewerNonInhalable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="potencyViewerOther.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="potencyViewerOther.Designer.cs">
+      <DependentUpon>potencyViewerOther.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="solventForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="solventForm.Designer.cs">
+      <DependentUpon>solventForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="solventViewerInhalable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="solventViewerInhalable.Designer.cs">
+      <DependentUpon>solventViewerInhalable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="solventViewerNonInhalable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="solventViewerNonInhalable.Designer.cs">
+      <DependentUpon>solventViewerNonInhalable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="solventViewerOther.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="solventViewerOther.Designer.cs">
+      <DependentUpon>solventViewerOther.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="terpenesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="terpenesForm.Designer.cs">
+      <DependentUpon>terpenesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="terpeneViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="terpeneViewer.Designer.cs">
+      <DependentUpon>terpeneViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="terpViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="terpViewer.Designer.cs">
+      <DependentUpon>terpViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="wAEdibleReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wAEdibleReportViewer.Designer.cs">
+      <DependentUpon>wAEdibleReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="waterActivityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="waterActivityForm.Designer.cs">
+      <DependentUpon>waterActivityForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="aWFlowerReport.resx">
+      <DependentUpon>aWFlowerReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="complianceReport.rdlc" />
+    <EmbeddedResource Include="complianceReportViewer.resx">
+      <DependentUpon>complianceReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="complianceReportViewer2.resx">
+      <DependentUpon>complianceReportViewer2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerList.resx">
+      <DependentUpon>customerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customersList.resx">
+      <DependentUpon>customersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IndexForm.resx">
+      <DependentUpon>IndexForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="metalsForm.resx">
+      <DependentUpon>metalsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="metalsInhalableReport.rdlc" />
+    <EmbeddedResource Include="metalsOtherReport.rdlc" />
+    <EmbeddedResource Include="metalsViewerInhalable.resx">
+      <DependentUpon>metalsViewerInhalable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="metalsViewerOther.resx">
+      <DependentUpon>metalsViewerOther.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="microbialForm.resx">
+      <DependentUpon>microbialForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="microbialInhalableReport.rdlc" />
+    <EmbeddedResource Include="microbialNonInhalableReport.rdlc" />
+    <EmbeddedResource Include="microbialNonInhalableReport.resx">
+      <DependentUpon>microbialNonInhalableReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="microbialViewerInhalable.resx">
+      <DependentUpon>microbialViewerInhalable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mycotoxinsForm.resx">
+      <DependentUpon>mycotoxinsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mycotoxinsReport.rdlc" />
+    <EmbeddedResource Include="mycotoxinsViewer.resx">
+      <DependentUpon>mycotoxinsViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pesticideForm.resx">
+      <DependentUpon>pesticideForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pestiInhalableReport.rdlc" />
+    <EmbeddedResource Include="pestiNonInhalableReport.rdlc" />
+    <EmbeddedResource Include="pestiViewerInhalable.resx">
+      <DependentUpon>pestiViewerInhalable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pestiViewerNonInhalable.resx">
+      <DependentUpon>pestiViewerNonInhalable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="potencyForm.resx">
+      <DependentUpon>potencyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="potencyInhalableReport.rdlc" />
+    <EmbeddedResource Include="potencyNonInhalableReport.rdlc" />
+    <EmbeddedResource Include="potencyOtherReport.rdlc" />
+    <EmbeddedResource Include="potencyViewerInhalable.resx">
+      <DependentUpon>potencyViewerInhalable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="potencyViewerNonInhalable.resx">
+      <DependentUpon>potencyViewerNonInhalable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="potencyViewerOther.resx">
+      <DependentUpon>potencyViewerOther.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="solventForm.resx">
+      <DependentUpon>solventForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="solventInhalableReport.rdlc" />
+    <EmbeddedResource Include="solventNonInhalableReport.rdlc" />
+    <EmbeddedResource Include="solventOtherReport.rdlc" />
+    <EmbeddedResource Include="solventViewerInhalable.resx">
+      <DependentUpon>solventViewerInhalable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="solventViewerNonInhalable.resx">
+      <DependentUpon>solventViewerNonInhalable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="solventViewerOther.resx">
+      <DependentUpon>solventViewerOther.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terpenesForm.resx">
+      <DependentUpon>terpenesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terpenesReport.rdlc" />
+    <EmbeddedResource Include="terpeneViewer.resx">
+      <DependentUpon>terpeneViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terpViewer.resx">
+      <DependentUpon>terpViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wAEdibleReport.rdlc" />
+    <EmbeddedResource Include="wAEdibleReportViewer.resx">
+      <DependentUpon>wAEdibleReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wAFlowerReport.rdlc" />
+    <EmbeddedResource Include="waterActivityForm.resx">
+      <DependentUpon>waterActivityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="fullDATASET.xsc">
+      <DependentUpon>fullDATASET.xsd</DependentUpon>
+    </None>
+    <None Include="fullDATASET.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fullDATASET.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fullDATASET.xss">
+      <DependentUpon>fullDATASET.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
